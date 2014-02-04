@@ -2,7 +2,7 @@
 
 Ti.Brightness provides the ability to read the iOS screen brightness level, and be notified when the brightness level is changed.
 
-<h2>IMPORTANT/h2>
+<h2>IMPORTANT</h2>
 
 This module only works on device.  If you run this in the simulator, you will not recieve any notification of screen brightness changes. Also, the brightness level will always show as 0.5.
 
@@ -58,7 +58,6 @@ The following example demonstrates how to add a brightness <b>changed</b> listen
 ~~~
 function onBrightChange(e){
 	Ti.API.info(JSON.stringify(e));
-	updateBrightness(e.brightness);
 };
 
 brightness.addEventListener('changed',onBrightChange);
@@ -70,6 +69,10 @@ This listener can be removed by using the removeEventListener method as show bel
 ~~~
 brightness.addEventListener('remove',onBrightChange);
 ~~~
+
+<h2>Example</h2>
+
+Please check the module's example folder on [github](https://github.com/benbahrenburg/Ti.Brightness/tree/master/example) for examples on how to use this module.
 
 <h3>Twitter</h3>
 
