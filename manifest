@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.1
+apiversion: 2
+description: Ti.Brightness
+author: Ben Bahrenburg
+license: Apache 2.0
+copyright: Copyright (c) 2014 by Bencoding / Ben Bahrenburg
+
+
+# these should not be edited
+name: TiBrightness
+moduleid: ti.brightness
+guid: beb49c41-0e95-4d8b-ad85-9a6f666adba0
+platform: iphone
+minsdk: 3.2.0.GA
