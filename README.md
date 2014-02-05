@@ -13,7 +13,7 @@ This module only works on device.  If you run this in the simulator, you will no
 
 
 <h2>In Action</h2>
-Please watch this [video](www.youtube.com/watch?v=bama8KSaGxQ) to see the module in action.
+Please watch this [video](http://www.youtube.com/watch?v=bama8KSaGxQ) to see the module in action.
 
 <h2>Download the compiled release</h2>
 
