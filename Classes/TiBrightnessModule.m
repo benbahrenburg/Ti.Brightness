@@ -103,4 +103,20 @@
     return @([UIScreen mainScreen].brightness);
 }
 
+-(void) setScreenBrightness:(id)args
+{
+    enum Args {
+		kArgValue = 0,
+		kArgCount
+	};
+    
+	// Validate correct number of arguments
+	ENSURE_ARG_COUNT(args, kArgCount);
+    
+    float value = [TiUtils floatValue:[args objectAtIndex:kArgValue] def:0.0];
+    
+    [[UIScreen mainScreen] setBrightness:value];
+
+}
+
 @end
