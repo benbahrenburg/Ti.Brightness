@@ -103,19 +103,24 @@
     return @([UIScreen mainScreen].brightness);
 }
 
--(void) setScreenBrightness:(id)args
+-(void) setScreenBrightness:(id)value
 {
-    enum Args {
-		kArgValue = 0,
-		kArgCount
-	};
-    
-	// Validate correct number of arguments
-	ENSURE_ARG_COUNT(args, kArgCount);
-    
-    float value = [TiUtils floatValue:[args objectAtIndex:kArgValue] def:0.0];
-    
-    [[UIScreen mainScreen] setBrightness:value];
+
+    float fValue = [TiUtils floatValue:value def:0.0];
+
+    //NSLog(@"Brightness value : %f", fValue);
+
+    if( fValue < 0.0f){
+        NSLog(@"[ERROR] Min brightness value allowed is 0");
+        return;
+    }
+
+    if( fValue > 1.0f){
+        NSLog(@"[ERROR] Max brightness value allowed is 1");
+        return;
+    }
+
+    [[UIScreen mainScreen] setBrightness:fValue];
 
 }
 
